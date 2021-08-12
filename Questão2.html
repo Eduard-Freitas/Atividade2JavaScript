@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão2</title>
+</head>
+
+<body>
+    <h1>Determinar todos os inteiros entre 1 e n</h1>
+    <script>
+        let n, cateto1, cateto2, hipotenusa;
+        var achou;
+
+        n = parseInt(prompt("Digite o comprimento maximo da hipotenusa: "));
+
+
+        for (hipotenusa = 1; hipotenusa <= n; hipotenusa++) {
+            achou = false;
+
+            for (cateto1 = 1; cateto1 < hipotenusa && !achou; cateto1++) {
+                cateto2 = cateto1;
+
+                while (cateto1 * cateto1 + cateto2 * cateto2 < hipotenusa * hipotenusa)
+                    cateto2++;
+
+                if (cateto1 * cateto1 + cateto2 * cateto2 == hipotenusa * hipotenusa) {
+                    console.log("hipotenusa = %d, catetos %d e %d\n", + hipotenusa, cateto1, cateto2);
+                    achou = true;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

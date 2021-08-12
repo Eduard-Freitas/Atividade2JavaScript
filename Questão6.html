@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 06</title>
+</head>
+
+<body>
+    <h1>Determine a decomposição em fatores primos  </h1>
+    <Script>
+        let n = parseInt(prompt("Digite um número: "));
+        let fator, m;
+
+        console.log("Decomposicao de %d em fatores primos: ", n);
+
+        fator = 2;
+
+        while (n > 1) {
+            m = 0;
+            while (n % fator == 0) {
+                m++;
+                n = n / fator;
+            }
+            if (m != 0) {
+                console.log("fator %d multiplicidade %d", fator, m);
+            }
+            fator++;
+        }
+    </Script>
+</body>
+
+</html>

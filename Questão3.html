@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+        let n, m, x, y, valor, xmax, ymax, valormax;
+
+        console.log("Maximizo x*y - x*x + y, onde 0 <= x <= n e 0 <= y <= m.\n");
+
+        n = parseInt(prompt("Entre com: n",));
+        m = parseInt(prompt("Entre com: m"));
+
+        xmax = ymax = 0;
+        valormax = 0;
+
+        for (x = 0; x <= n; x++) {
+            for (y = 0; y <= m; y++) {
+                valor = x * y - x * x + y;
+                if (valor > valormax) {
+                    valormax = valor;
+                    xmax = x;
+                    ymax = y;
+                }
+            }
+        }
+
+        console.log("Valor maximo da funcao = %d foi alcancado com x = %d e y = %d\n", + valormax, xmax, ymax);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+</head>
+
+<body>
+    <h1>Determinar o máximo divisor comum</h1>
+    <script>
+        let i, max_div, divisor;
+
+        let n = parseInt(prompt("Digite um número de elementos da sequência: "));
+
+        let mdc = parseInt(prompt("Entre com o 1°. número da sequência:  "));
+        console.log("%d", mdc);
+
+        i = 1;
+        while (i < n) {
+            let numero = parseInt(prompt("Entre com o 2°. número da sequência: ", i + 1));
+            console.log("%d", numero);
+            i = i + 1;
+
+            divisor = 1;
+            while (divisor <= mdc && divisor <= numero) {
+                if (mdc % divisor == 0 && numero % divisor == 0) {
+                    max_div = divisor;
+                }
+                divisor = divisor + 1;
+            }
+            mdc = max_div;
+
+        }
+        console.log("Maximo divisor comum é = %d", mdc);
+
+    </script>
+</body>
+
+</html>
